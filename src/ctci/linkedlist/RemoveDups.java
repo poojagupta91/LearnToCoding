@@ -1,6 +1,5 @@
 package ctci.linkedlist;
 
-import java.util.HashMap;
 import java.util.HashSet;
 
 /**
@@ -18,43 +17,8 @@ import java.util.HashSet;
  *
  */
 
-class Node<T> {
-	T data;
-	Node<T> next;
-	
-	Node(T data){
-		this.data = data;
-		this.next = null;
-	}
-	
-	Node(T data,Node<T> next){
-		this.data = data;
-		this.next = next;
-	}
-}
-
 public class RemoveDups {
 
-	public static void main(String[] args) {
-		
-		Node<Integer> nodeOne = new Node<Integer>(11);
-		Node<Integer> nodeTwo = new Node<Integer>(10,nodeOne);
-		Node<Integer> nodeThree = new Node<Integer>(12,nodeTwo);
-		Node<Integer> nodeFour = new Node<Integer>(11,nodeThree);
-		Node<Integer> nodeFive = new Node<Integer>(13,nodeFour);
-		Node<Integer> head = nodeFive;
-		Node<Integer> ptr = nodeFive;
-		
-		//deleteDupsHashSet(head);
-		deleteDupsNoBuffer(head);
-		
-		while(ptr != null){
-			System.out.print(ptr.data + " ");
-			ptr = ptr.next;
-		}
-
-	}
-	
 	public static void deleteDupsHashSet(Node<Integer> head){
 		
 		HashSet<Integer> set = new HashSet<Integer>();
@@ -91,5 +55,26 @@ public class RemoveDups {
 			current = current.next;
 		}
 	}
+	
+	public static void main(String[] args) {
+		
+		Node<Integer> nodeOne = new Node<Integer>(11);
+		Node<Integer> nodeTwo = new Node<Integer>(10,nodeOne);
+		Node<Integer> nodeThree = new Node<Integer>(12,nodeTwo);
+		Node<Integer> nodeFour = new Node<Integer>(11,nodeThree);
+		Node<Integer> nodeFive = new Node<Integer>(13,nodeFour);
+		Node<Integer> head = nodeFive;
+		Node<Integer> ptr = nodeFive;
+		
+		//deleteDupsHashSet(head);
+		deleteDupsNoBuffer(head);
+		
+		while(ptr != null){
+			System.out.print(ptr.data + " ");
+			ptr = ptr.next;
+		}
+
+	}
+	
 
 }

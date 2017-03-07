@@ -18,12 +18,6 @@ import java.util.Arrays;
 
 public class CheckPermutation {
 
-	public static void main(String[] args) {
-		
-		System.out.println(checkPermutation("dog","god"));
-
-	}
-	
 	public static boolean checkPermutation(String s,String p){
 		if(s.isEmpty() || p.isEmpty() || s.length() != p.length())
 			return false;
@@ -44,4 +38,11 @@ public class CheckPermutation {
 		
 		return charArray;
 	}
+	
+	public static void main(String[] args) {
+		
+		System.out.println(checkPermutation("dog","god"));
+
+	}
+	
 }

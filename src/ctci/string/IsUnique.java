@@ -18,12 +18,6 @@ package ctci.string;
 
 public class IsUnique {
 
-	public static void main(String[] args) {
-		
-		System.out.println(isUnique("abcdefABCDEF"));
-		
-	}
-
 	public static boolean isUnique(String str){
 		
 		boolean[] boolArray =  new boolean[128];
@@ -38,5 +32,9 @@ public class IsUnique {
 			boolArray[val] = true;
 		}
 		return true;
+	}
+	
+	public static void main(String[] args) {
+		System.out.println(isUnique("abcdefABCDEF"));
 	}
 }
